@@ -27,9 +27,7 @@
     "eslint-plugin-no-loops": "^0.3.0",
     "nodemon": "^3.0.1",
     "prisma": "^5.0.0",
-    "rimraf": "^5.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "rimraf": "^5.0.1"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
@@ -40,6 +38,9 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.1",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "nodemon": "^3.0.1"
   }
 }
