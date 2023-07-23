@@ -1,0 +1,468 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Blog API",
+    "description": "An Application for create and edit blog",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "https://eventappmanager.herokuapp.com",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "User",
+      "description": "API for users in the system"
+    },
+    {
+      "name": "Post",
+      "description": " API for posts in the system"
+    },
+    {
+      "name": "Admin",
+      "description": " API for centers in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users/signup": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create new user",
+        "description": "Create new user",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/UserSignup"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New user is created",
+            "schema": {
+              "$ref": "#/definitions/UserSignup"
+            }
+          }
+        }
+      }
+    },
+  "/user/signin": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Login an existing user",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Login an existing user",
+            "schema": {
+              "$ref": "#/definitions/UserSignin"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "User signin",
+            "schema": {
+              "$ref": "#/definitions/UserSignin"
+            }
+          }
+        }
+      }
+    },
+    "/post": {
+      "post": {
+        "tags": [
+          "Post"
+        ],
+        "description": "Add a new content",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Add new content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/post/": {
+      "get": {
+        "tags": [
+          "Post"
+        ],
+        "description": "Get all the Post for a user",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Get all the Post for a user",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/post/:id": {
+      "get": {
+        "tags": [
+          "Post"
+        ],
+        "description": "Get post by ID",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Get post by ID",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/post/:id/": {
+      "patch": {
+        "tags": [
+          "Post"
+        ],
+        "description": "Update post by ID",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Update post by ID",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "post/:id/": {
+      "delete": {
+        "tags": [
+          "Post"
+        ],
+        "description": "Delete post by ID",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Delete post by ID",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/admin/all-post": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "Admin get all post",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Admin get all post",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/admin/single-post/:id": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "Get single the Post for a user",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Get single the Post for a user",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/admin/update-post/:id": {
+      "patch": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "Admin update post by ID",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Admin update post by ID",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/post/:id/": {
+      "delete": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "Admin delete by ID",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Admin delete by ID",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    },
+    "/admin/update-role": {
+      "patch": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "Update a user role",
+        "parameters": [
+          {
+            "name": "post",
+            "in": "body",
+            "description": "Update a user role",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Post content",
+            "schema": {
+              "$ref": "#/definitions/Post"
+            }
+          }
+        }
+      }
+    }
+  },
+  
+
+
+
+  "definitions": {
+    "UserSignup": {
+      "required": [
+        "email",
+        "name",
+        "password",
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "UserSignin": {
+        "required": [
+        "email",
+        "password",
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type":
+          "string"
+        }
+      }
+    },
+    "Post": {
+      "required": [
+      "content",
+      "title",
+      "_id"
+    ],
+    "properties": {
+      "_id": {
+        "type": "string"
+      },
+      "content": {
+        "type": "string"
+      },
+      "title": {
+        "type":
+        "string"
+      }
+    }
+  },
+    "UserSignup": {
+      "type": "array",
+      "$ref": "#/definitions/UserSignup"
+    },
+    "UserSignin": {
+      "type": "array",
+      "$ref": "#/definitions/UserSignin"
+    },
+    "Post": {
+      "type": "array",
+      "$ref": "#/definitions/Post"
+    }
+  }
+}
