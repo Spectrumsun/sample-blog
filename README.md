@@ -1,4 +1,4 @@
-# bit-backend
+# Blog API
 
 A simple API in Javascript, Node, express and MongoDB
 
