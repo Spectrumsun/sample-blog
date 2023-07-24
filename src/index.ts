@@ -5,7 +5,7 @@ import config from './config';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
 //import swaggerDocument from "./swagger.json";
-const swaggerDocument = require('./swagger.json');
+const swaggerDocument = require('../swagger.json');
 const app: Express = express();
 const port = config.PORT;
 
