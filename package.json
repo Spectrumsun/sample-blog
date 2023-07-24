@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "npx nodemon",
-    "build": "rm -rf build && npm run tsc",
+    "build": "npm i typescript && rm -rf build && npm run tsc",
     "lint": "eslint . --ext .ts",
     "seed": "ts-node prisma/seed.ts",
     "findUnique": "npx prisma generate",
