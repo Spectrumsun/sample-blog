@@ -118,7 +118,7 @@ router.patch(
 router.use('*', (req, res) =>
   res.status(404).json({
     message: 'That url does not exist on this server 🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫',
-  }));
+}));
 
 
 

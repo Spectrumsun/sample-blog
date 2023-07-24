@@ -3,7 +3,7 @@
 A simple API in Javascript, Node, express and MongoDB
 
 # View App
-  * Host App Backend  https://bit-60by.onrender.com/api/v1/
+  * Host App Backend  https://blog-api-8yad.onrender.com/api/v1/
 
 # Technologies Used
   * MongoDb
@@ -14,7 +14,22 @@ A simple API in Javascript, Node, express and MongoDB
 
   #Endpoints
   User
-  * POST: All state  https://bit-60by.onrender.com/api/v1/states
+  * POST:   Create user         -   https://blog-api-8yad.onrender.com/api/v1/user/signup
+  * POST:   Sign in user        -   https://blog-api-8yad.onrender.com/api/v1/user/signin
+  
+  Post
+  * GET:    List all post       -   https://blog-api-8yad.onrender.com/api/v1/post
+  * GET:    Single post         -   https://blog-api-8yad.onrender.com/api/v1/post/:id
+  * POST    Create a new post   -   https://blog-api-8yad.onrender.com/api/v1/post
+  * Patch   Update a post       -   https://blog-api-8yad.onrender.com/api/v1/post/:id
+  * Delete  Delete a post       -   https://blog-api-8yad.onrender.com/api/v1/post/:id
+
+  Admin
+  * GET     All post            -   https://blog-api-8yad.onrender.com/api/v1/admin/all-post
+  * GET     Single post         -   https://blog-api-8yad.onrender.com/api/v1/admin/single-post/:id
+  * PATCH   Update any  post    -   https://blog-api-8yad.onrender.com/api/v1/admin/update-post/:id
+  * DELETE  Delete any post     -   https://blog-api-8yad.onrender.com/api/v1/admin/delete-post/:id
+  * PATCH   Update user role    -   https://blog-api-8yad.onrender.com/api/v1/admin/update-role
 
 # Run Locally
   * Download or clone the repo
@@ -30,4 +45,4 @@ A simple API in Javascript, Node, express and MongoDB
 
 
 # Documentation
-  Swagger: 
+  Swagger:    -   https://blog-api-8yad.onrender.com/api-docs/

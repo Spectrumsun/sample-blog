@@ -40,14 +40,12 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://blog-api-8yad.onrender.com/api/v1",
       },
     ],
   },
   apis: ["./routes/*.js", "./routes/*.ts", ],
 };
-
-const specs = swaggerJsdoc(options);
 
 
 app.use(
