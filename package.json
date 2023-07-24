@@ -41,5 +41,8 @@
     "swagger-ui-express": "^5.0.0",
     "typescript": "^5.1.6",
     "prisma": "^5.0.0"
+  },
+  "engines": {
+    "node": "20.5.0"
   }
 }
