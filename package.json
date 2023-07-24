@@ -6,11 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "npx nodemon",
-    "build": "rm -rf build && npx tsc -p .tsconfig.json",
+    "build": "rm -rf build && npm run tsc",
     "lint": "eslint . --ext .ts",
     "seed": "ts-node prisma/seed.ts",
     "findUnique": "npx prisma generate",
-    "start": "node build/index.js"
+    "tsc": "./node_modules/typescript/bin/tsc -p .tsconfig.json",
+    "start": "npm un build && node build/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -26,8 +27,8 @@
     "eslint": "^8.45.0",
     "eslint-plugin-no-loops": "^0.3.0",
     "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1",
-    "prisma": "^5.0.0"
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
