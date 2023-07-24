@@ -27,3 +27,7 @@ A simple API in Javascript, Node, express and MongoDB
   * Run the seed with `npm run seed`
   * Run `npm start` to start the in development
   * Go to `127.0.0.1:6000/api/v1`
+
+
+# Documentation
+  Swagger: 
